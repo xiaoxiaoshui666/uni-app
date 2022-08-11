@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "test": "/components/Test",
+    "son-one": "/components/sonOne",
+    "son-twe": "/components/sonTwe"
+  }
+}

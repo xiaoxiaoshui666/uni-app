@@ -1,0 +1,71 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/message/message",
+			// 局部的配置
+			"style": {
+				"navigationBarTitleText": "小吴"
+			}
+		},
+		{
+			"path": "pages/navigator/navigator"
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"enablePullDownRefresh": true, // 下拉刷新
+				"onReachBottomDistance": 0 // 上拉到底部的距离  页面触底
+			}
+		},
+		{
+			"path": "pages/detail/detail"
+		},
+		{
+			"path": "pages/list/list"
+		}
+	],
+	"globalStyle": { // 全局的
+		"navigationBarTextStyle": "black", // 导航栏标题标题色及状态栏前景色 仅支持black/white
+		"navigationBarTitleText": "小吴", // 导航栏标题文字内容
+		"navigationBarBackgroundColor": "#F8F8F8", // 导航栏背景颜色 
+		"backgroundColor": "#F8F8F8", // 窗口背景色
+		// "enablePullDownRefresh": true ,       // 是否下拉刷新
+		"backgroundTextStyle": "light" // 下拉loading的样式 仅支持dark/light
+	},
+	"tabBar": { // 指定一级导航栏，以及 tab 切换时显示的对应页
+		"color": "green", // 文字默认颜色
+		"selectedColor": "#914422", // 文字选中时的颜色
+		"backgroundColor": "#ffffff", // 背景色
+		"borderStyle": "black", // 上边框的颜色，可选值 black/white
+		"list": [ // tab 的列表 最少2个、最多5个 tab
+			{
+				"text": "首页", // tab 上按钮文字，非必填
+				"pagePath": "pages/index/index", // 页面路径，必须在 pages 中先定义
+				"iconPath": "static/logo.png", // 图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px
+				"selectedIconPath": "static/logo.png" // 选中时的图片路径
+			},
+			{
+				"text": "个人信息",
+				"pagePath": "pages/message/message",
+				"iconPath": "static/logo.png",
+				"selectedIconPath": "static/logo.png"
+			},
+			{
+				"text": "详情",
+				"pagePath": "pages/detail/detail",
+				"iconPath": "static/logo.png",
+				"selectedIconPath": "static/logo.png"
+			}
+		]
+	},
+	"condition": { // 启动模式配置，模拟直达页面的场景，如：小程序转发后
+		"current": 0, // number 当前激活的模式，list节点的索引值
+		"list": [ // 启动模式列表
+			{
+				"name": "路由跳转", // 启动模式名称
+				"path": "pages/navigator/navigator", // 启动页面路径
+				"query": "id=10" // 启动参数，可在页面的 onLoad 函数里获得
+			}
+		]
+	}
+}

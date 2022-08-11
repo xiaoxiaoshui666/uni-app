@@ -1,0 +1,1 @@
+<view class="_div"><button size="mini" data-event-opts="{{[['tap',[['sendNum',['$event']]]]]}}" bindtap="__e">我是大儿我要给二儿传数据</button></view>
